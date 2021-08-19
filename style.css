@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./pexels-chevanon-photography-325044.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+header {
+    font-size: 1.5rem;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form input{
+    color: #000000;
+    font-weight: 500;
+}
+
+form input, 
+form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+}
+form button {
+    color: #e03506 ;
+background: white;
+}
+form button:hover{
+    color: #de4cf1;
+    transition: color 250ms  cubic-bezier(.17,.67,.83,.67);
+}
+
+.todo__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo__list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s cubic-bezier(.17,.67,.83,.67);
+    
+}
+.todo li {
+    flex:1;
+}
+.trash-btn, .complete-btn{
+    background: white;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 250ms  cubic-bezier(.17,.67,.83,.67);
+    transition: color 250ms  cubic-bezier(.17,.67,.83,.67);
+}
+.trash-btn:hover{  
+    color: #fc3904;
+}
+.complete-btn:hover{
+    color:  #de4cf1;
+}
+.todo-item {
+    padding: 0rem 0.5rem;
+    color: #fc3904;
+    font-weight: 500;
+}
+.fa-check,
+.fa-trash {
+    pointer-events: none;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: o.5;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: #000000;
+    width: 14rem;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 20px;
+}
+
+.select::after{
+    content:"\25BC";
+    position: absolute;
+    background: #fc3904;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
